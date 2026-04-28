@@ -109,7 +109,7 @@ export function ContactSection() {
                 {sent && (
                   <motion.p
                     className="mt-4 text-center text-xs text-accent"
-                    initial={{ opacity: 0, y: 6 }}
+                    initial={{ opacity: 1, y: 4 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0 }}
                     role="status"

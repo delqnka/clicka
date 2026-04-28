@@ -51,7 +51,7 @@ export function NomadValues() {
               <motion.article
                 key={x.title}
                 className="rounded-2xl border border-stone-200/80 bg-white p-5 shadow-sm"
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 1, y: 12 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.4, delay: i * 0.06 }}

@@ -21,7 +21,7 @@ export function NomadFooterCta() {
         </p>
         <motion.form
           className="mt-8 flex max-w-md flex-col gap-3 sm:mx-auto sm:flex-row"
-          initial={{ opacity: 0, y: 8 }}
+          initial={{ opacity: 1, y: 6 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >

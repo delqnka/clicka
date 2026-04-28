@@ -26,7 +26,7 @@ export function HeroSection() {
         <motion.h1
           className="max-w-[14ch] text-[clamp(2.5rem,6vw+1rem,4.25rem)] leading-[0.95] font-semibold tracking-[-0.05em] text-white"
           id="hero-title"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 1, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65, delay: 0.1, ease: [0.25, 0.1, 0.25, 1] }}
         >
@@ -36,7 +36,7 @@ export function HeroSection() {
         </motion.h1>
         <motion.p
           className="mt-6 max-w-md text-pretty text-base text-white/55"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 1, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55, delay: 0.18, ease: [0.25, 0.1, 0.25, 1] }}
         >

@@ -7,6 +7,7 @@ import { useCallback, useId, useState } from "react";
 import { site } from "@/lib/site";
 
 const links = [
+  { href: "/nomad-gear", label: "Nomad Gear" },
   { href: "#work", label: "Work" },
   { href: "#services", label: "Services" },
   { href: "#contact", label: "Contact" },
@@ -20,9 +21,9 @@ export function SiteHeader() {
   return (
     <motion.header
       className="fixed top-0 right-0 left-0 z-50 border-b border-white/[0.06] bg-[#0a0a0a]/55 backdrop-blur-2xl"
-      initial={{ y: -20, opacity: 0 }}
+      initial={{ y: -8, opacity: 1 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
+      transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         <Link

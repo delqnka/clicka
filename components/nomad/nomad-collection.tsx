@@ -48,7 +48,7 @@ export function NomadCollection() {
           {products.map((p, i) => (
             <motion.li
               key={p.name}
-              initial={{ opacity: 0, y: 16 }}
+              initial={{ opacity: 1, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-20px" }}
               transition={{ duration: 0.4, delay: i * 0.08 }}

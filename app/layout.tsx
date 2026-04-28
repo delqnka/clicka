@@ -66,7 +66,9 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
         />
-        <SmoothScroll>{children}</SmoothScroll>
+        <SmoothScroll>
+          <div className="relative z-10 min-h-dvh">{children}</div>
+        </SmoothScroll>
       </body>
     </html>
   );

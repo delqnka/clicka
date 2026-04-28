@@ -45,7 +45,7 @@ export function NomadTestedWild() {
               <motion.figure
                 key={shot.id}
                 className="group relative min-h-[220px] overflow-hidden rounded-2xl sm:min-h-[240px] lg:min-h-[260px]"
-                initial={{ opacity: 0, y: 28 }}
+                initial={{ opacity: 1, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.5, delay: i * base }}

@@ -54,7 +54,7 @@ export function NomadHero() {
         <div className="mx-auto w-full max-w-4xl text-center sm:text-left">
           <motion.p
             className="text-sm font-medium tracking-[0.25em] text-amber-100/90 uppercase"
-            initial={{ opacity: 0, y: 12 }}
+            initial={{ opacity: 1, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
@@ -63,7 +63,7 @@ export function NomadHero() {
           <motion.h1
             className="mt-3 text-4xl font-extrabold leading-[1.02] tracking-[-0.05em] text-stone-50 [font-family:var(--font-nomad-display),system-ui,sans-serif] sm:text-6xl md:text-7xl"
             id="nomad-hero-title"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.05 }}
           >
@@ -73,7 +73,7 @@ export function NomadHero() {
           </motion.h1>
           <motion.p
             className="mx-auto mt-5 max-w-lg text-balance text-base text-stone-200/80 sm:mx-0"
-            initial={{ opacity: 0, y: 12 }}
+            initial={{ opacity: 1, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
@@ -82,7 +82,7 @@ export function NomadHero() {
           </motion.p>
           <motion.div
             className="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center"
-            initial={{ opacity: 0, y: 8 }}
+            initial={{ opacity: 1, y: 6 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45, delay: 0.16 }}
           >
