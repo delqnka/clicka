@@ -1,0 +1,38 @@
+.nomad-root {
+  --nomad-forest: #1a2f24;
+  --nomad-bark: #3d2e26;
+  --nomad-moss: #2d4a3a;
+  --nomad-sand: #c4b5a0;
+  --nomad-mist: #8a8f86;
+  color-scheme: light;
+}
+
+.nomad-ken {
+  animation: nomad-ken 28s ease-in-out infinite alternate;
+}
+
+@keyframes nomad-ken {
+  from {
+    transform: scale(1) translate(0, 0);
+  }
+  to {
+    transform: scale(1.1) translate(-1%, 1%);
+  }
+}
+
+.nomad-film {
+  background: linear-gradient(
+    90deg,
+    rgba(26, 47, 36, 0.08) 0%,
+    transparent 50%,
+    rgba(61, 46, 38, 0.08) 100%
+  );
+}
+
+.nomad-radial {
+  background: radial-gradient(
+    ellipse 80% 50% at 50% 0%,
+    rgba(45, 74, 58, 0.35) 0%,
+    transparent 70%
+  );
+}

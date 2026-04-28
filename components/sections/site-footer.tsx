@@ -8,7 +8,14 @@ export function SiteFooter() {
         <p className="text-sm font-medium tracking-[-0.02em] text-white/50">
           © {new Date().getFullYear()} {site.legal}
         </p>
-        <div className="flex items-center gap-6 text-sm text-white/40">
+        <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-white/40 sm:gap-6">
+          <Link
+            href="/nomad-gear"
+            className="text-white/55 transition hover:text-accent"
+          >
+            Nomad Gear — live demo
+          </Link>
+          <span className="hidden sm:inline">·</span>
           <span className="hover:text-white/60">Sofia · remote</span>
           <Link href="mailto:hello@clicka.bg" className="hover:text-white/80">
             hello@clicka.bg
