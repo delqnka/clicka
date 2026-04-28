@@ -1,38 +1,16 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Reveal } from "@/components/reveal";
+import { showcaseProjects } from "@/lib/work-showcase";
 
-const projects = [
-  {
-    title: "Velvet Commerce",
-    tag: "Web / performance",
-    span: "sm:col-span-2 sm:row-span-2 sm:min-h-[22rem]",
-    src: "https://images.unsplash.com/photo-1634017839464-5c339bbe3c35?w=1200&q=80&auto=format&fit=crop",
-    alt: "Abstract minimal architecture",
-  },
-  {
-    title: "Aether Labs",
-    tag: "Product / AI",
-    span: "min-h-[200px] sm:min-h-0",
-    src: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80&auto=format&fit=crop",
-    alt: "Fluid dark gradient",
-  },
-  {
-    title: "Pulse / Launch",
-    tag: "Video / campaign",
-    span: "min-h-[200px] sm:min-h-0",
-    src: "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?w=800&q=80&auto=format&fit=crop",
-    alt: "Colour and light",
-  },
-  {
-    title: "Nord Studio",
-    tag: "Rebrand + site",
-    span: "min-h-[180px] sm:col-span-3",
-    src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1000&q=80&auto=format&fit=crop",
-    alt: "Misty landscape",
-  },
-] as const;
+const spans: Record<string, string> = {
+  velvet: "sm:col-span-2 sm:row-span-2 sm:min-h-[22rem]",
+  aether: "min-h-[200px] sm:min-h-0",
+  pulse: "min-h-[200px] sm:min-h-0",
+  nord: "min-h-[180px] sm:col-span-3",
+};
 
 export function WorkSection() {
   return (
@@ -53,26 +31,36 @@ export function WorkSection() {
             >
               Proof, not promise.
             </h2>
+            <p className="mt-3 max-w-md text-sm text-white/45">
+              Open sample case studies — each route is a compact landing built for
+              the portfolio.
+            </p>
           </Reveal>
         </div>
         <div className="flex snap-x snap-mandatory gap-3 overflow-x-auto pb-2 sm:grid sm:max-w-none sm:auto-rows-fr sm:grid-cols-3 sm:gap-4 sm:overflow-visible">
-          {projects.map((p, i) => (
+          {showcaseProjects.map((p, i) => (
             <Reveal
-              key={p.title}
+              key={p.slug}
               className={`
-                glass group relative min-w-[min(100%,20rem)] snap-center overflow-hidden rounded-2xl
+                group relative min-w-[min(100%,20rem)] snap-center overflow-hidden rounded-2xl
                 sm:min-w-0
-                ${p.span}
+                ${spans[p.slug] ?? ""}
+                glass
               `}
               delay={0.04 * i}
             >
-              <div className="relative aspect-[4/3] w-full sm:aspect-auto sm:h-full sm:min-h-[10rem]">
+              <Link
+                href={`/work/${p.slug}`}
+                className="absolute inset-0 z-10"
+                aria-label={`Open sample: ${p.title}`}
+              />
+              <div className="pointer-events-none relative aspect-[4/3] w-full sm:aspect-auto sm:h-full sm:min-h-[10rem]">
                 <Image
                   src={p.src}
                   alt={p.alt}
                   fill
                   sizes="(max-width: 640px) 85vw, 33vw"
-                  className="object-cover transition duration-700 group-hover:scale-[1.03]"
+                  className="object-cover transition duration-700 group-hover:scale-[1.03] group-focus-within:scale-[1.03]"
                   unoptimized
                   priority={i === 0}
                 />
@@ -81,6 +69,9 @@ export function WorkSection() {
                   <p className="text-xs text-white/50">{p.tag}</p>
                   <p className="text-lg font-medium tracking-[-0.02em] text-white">
                     {p.title}
+                  </p>
+                  <p className="mt-2 text-xs text-accent/90">
+                    View sample →
                   </p>
                 </div>
               </div>
